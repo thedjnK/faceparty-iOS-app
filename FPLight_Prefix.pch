@@ -1,0 +1,77 @@
+//
+// Prefix header for all source files of the 'Testy' target in the 'Testy' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+//Holds the last view ID so things like the credit view can go back properly
+UIView *LastView;
+
+//Is a HTTP request in progress?
+Boolean HTTPProgress;
+
+//Is the generic SSL proxy in use?
+Boolean HTTPProxy;
+
+//Is there a block list in use?
+Boolean PestListActive;
+
+//Is time changed from "x mins ago" to a time?
+Boolean NormaliseTimeActive;
+
+//Used to transport a string over a multiple function-call that doesn't support return values
+NSString *ReturnString;
+
+//Used to store the cookie-data
+NSMutableArray *CookieData;
+
+//Used for loop counting
+NSInteger i; //Loop counter
+NSInteger l; //Number of loops
+NSInteger i2; //Inner-loop counter
+NSInteger i3; //Secondary loop counter
+NSInteger i4; //Third loop counter
+NSInteger i5; //Forth loop counter
+
+//Storing entries of Pest-List, and a counter for gossip checking
+NSMutableArray *PestList;
+Boolean FoundPestList;
+
+//Storing number of messages and alerts (read and unread)
+NSInteger Messages;
+NSInteger Alerts;
+NSInteger NewMessages;
+NSInteger NewAlerts;
+
+//Theme prefix
+NSString *CurrentTheme;
+
+//Information on the current thread
+NSInteger CurrentThread;
+NSInteger CurrentThreadPage;
+
+NSURLConnection *URLConnection;
+//- (IBAction)done; ???
+NSString *yo;
+NSString *baseURL;
+NSMutableString *RecievedData;
+NSArray *globarray;
+NSDictionary *httpResponse;
+NSTimer *colourChange;
+Boolean ColDirection;
+Boolean keyboardVisible;
+CGPoint offset;
+NSString *URLRequest;
+
+//Message Type
+Boolean MessageTypes; //True = messages, False = alerts
+
+//stores galleries
+NSMutableArray *GalleryNames;
+UIImage *UploadImage;
+
+//Build number
+NSString *CurrentBuildVersion;
